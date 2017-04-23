@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bt.gov.dit.officenoticeboard.Fragment.AddNoticeFragment">
+    <TextView
+        android:id="@+id/add_task_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Notice"
+        android:textStyle="bold"
+        android:textSize="40px" />
+
+
+    <Spinner
+        android:id="@+id/notice_purpose_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_task_text_view"
+        android:layout_toRightOf="@+id/add_task_text_view"/>
+
+    <EditText
+        android:id="@+id/start_date_edit_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notice_purpose_spinner"
+        android:hint="Start Date"
+        android:visibility="invisible"/>
+    <EditText
+        android:id="@+id/end_date_edit_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="End Date"
+        android:layout_below="@+id/notice_purpose_spinner"
+        android:layout_toRightOf="@+id/start_date_edit_text"
+        android:visibility="invisible"/>
+    <EditText
+        android:id="@+id/place_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_date_edit_text"
+        android:hint="Description"/>
+    <Button
+        android:id="@+id/select_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Image to Upload"
+        android:layout_below="@+id/place_edit_text"/>
+    <Button
+        android:id="@+id/add_notice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Notice"
+        android:layout_below="@+id/select_image_btn"/>
+
+</RelativeLayout>

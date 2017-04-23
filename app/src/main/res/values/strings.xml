@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Office Notice Board</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="notice_board_tab">View Notice</string>
+    <string name="employee_availibility_tab">Staff Status</string>
+    <string name="list_employee_tab">list Employee</string>
+    <string name="employee_profile_tab">Your Profile </string>
+
+    <string name="agency_notice">\t\tAgency Name\nOffice Notice Board</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="toggle_on">In</string>
+    <string name="toggle_off">Out</string>
+    <string name="edit_profile">Edit</string>
+
+</resources>
