@@ -71,7 +71,7 @@ public class NoticeBoardAsyncTask extends AsyncTask<Integer , Void, ArrayList<No
     }
 
     private String getUrl(){
-        return  "http://192.168.43.104/officeNoticeBoard/json/noticedata.php";
+        return  "http://192.168.3.73/officeNoticeBoard/json/noticedata.php";
 
     }
 }
