@@ -50,10 +50,10 @@ private Button loginBtn;
     public void onReceive(Object response) {
         if(response !=null && ((LoginResponse)response).getStatus() == Constant.LOGIN_SUCCESS) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            Intent intent1= new Intent(LoginActivity.this,FirstTimeLoginActivity.class);
+            Intent intentchangepassword= new Intent(LoginActivity.this,FirstTimeLoginActivity.class);
            if(((LoginResponse)response).getFirstlogin()==Constant.STATUS_FIRST_TIME_LOGIN){
               //Toast.makeText(LoginActivity.this,"emp id=" + ((LoginResponse)response).getEmployeeId()+"status="+((LoginResponse)response).getStatus()+"flogin="+((LoginResponse)response).getFirstlogin(), Toast.LENGTH_SHORT).show();
-               startActivity(intent1);
+               startActivity(intentchangepassword);
            }else{
                startActivity(intent);
            }
