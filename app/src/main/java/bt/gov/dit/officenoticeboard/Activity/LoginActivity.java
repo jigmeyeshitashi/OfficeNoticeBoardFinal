@@ -17,6 +17,7 @@ import bt.gov.dit.officenoticeboard.constant.Constant;
 public class LoginActivity extends Activity implements OnReceiveResult {
     private EditText userName;
     private EditText password;
+    private int firstlogin;
 private Button loginBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,13 @@ private Button loginBtn;
     public void onReceive(Object response) {
         if(response !=null && ((LoginResponse)response).getStatus() == Constant.LOGIN_SUCCESS) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
+            Intent intent1= new Intent(LoginActivity.this,FirstTimeLoginActivity.class);
+           if(((LoginResponse)response).getFirstlogin()==Constant.STATUS_FIRST_TIME_LOGIN){
+              //Toast.makeText(LoginActivity.this,"emp id=" + ((LoginResponse)response).getEmployeeId()+"status="+((LoginResponse)response).getStatus()+"flogin="+((LoginResponse)response).getFirstlogin(), Toast.LENGTH_SHORT).show();
+               startActivity(intent1);
+           }else{
+               startActivity(intent);
+           }
         }else{
             Toast.makeText(LoginActivity.this, "Unable to login please check username and passowrd", Toast.LENGTH_SHORT).show();
         }

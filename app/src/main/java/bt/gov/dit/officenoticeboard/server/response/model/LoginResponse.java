@@ -12,14 +12,25 @@ public class LoginResponse implements Serializable {
 
     @SerializedName("employee_id")
     private String employeeId;
-    @SerializedName("login_status")
+    @SerializedName("password")
+    private String password;
+    @SerializedName("status")
     private int status;
+    @SerializedName("first_login")
+    private int firstlogin;
 
     public String getEmployeeId() {
         return employeeId;
     }
 
+    public String getPassword() {
+        return password;
+    }
     public int getStatus() {
         return status;
     }
+    public int getFirstlogin() {
+        return firstlogin;
+    }
+
 }
